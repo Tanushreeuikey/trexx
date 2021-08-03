@@ -80,7 +80,7 @@ function draw() {
   
   background(backgroundImg);
   //displaying score
-  text("Score: "+ score, 500,50);
+ 
   
  
 
@@ -112,6 +112,9 @@ function draw() {
       camera.position.x=trex.x
       camera.position.y=trex.y
     }
+    
+     var pos = trex.position.x+350
+      text("Score: "+ score, pos,50);
     //add gravity
     trex.velocityY = trex.velocityY + 0.8
   
