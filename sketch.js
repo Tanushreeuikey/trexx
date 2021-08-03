@@ -111,10 +111,12 @@ function draw() {
       changePosition(5,0)
       camera.position.x=trex.x
       camera.position.y=trex.y
+      
+       var pos = trex.position.x+350
+      text("Score: "+ score, pos,50);
     }
     
-     var pos = trex.position.x+350
-      text("Score: "+ score, pos,50);
+    
     //add gravity
     trex.velocityY = trex.velocityY + 0.8
   
