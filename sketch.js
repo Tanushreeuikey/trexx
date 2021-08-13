@@ -112,10 +112,10 @@ function draw() {
       camera.position.x=trex.x
       camera.position.y=trex.y
       
-       var pos = trex.position.x+350
-      text("Score: "+ score, pos,50);
     }
     
+     var pos = trex.position.x+350
+      text("Score: "+ score, pos,50);
     
     //add gravity
     trex.velocityY = trex.velocityY + 0.8
@@ -183,7 +183,8 @@ function reset()
 
 function spawnObstacles(){
  if (frameCount % 160 === 0){
-   var obstacle = createSprite(displayWidth*100,40);
+   var pos=trex.position.x+600
+   var obstacle = createSprite(pos,284);
    obstacle.velocityX = -(6 + score/100);
    
     //generate random obstacles
@@ -216,7 +217,8 @@ function spawnObstacles(){
 function spawnClouds() {
   //write code here to spawn the clouds
   if (frameCount % 150=== 0) {
-    var cloud = createSprite(displayWidth-5000,displayHeight-900);
+    var pos=trex.position.x+600
+    var cloud = createSprite(pos,displayHeight-850);
     cloud.y = Math.round(random(80,120));
     cloud.addImage(cloudImage);
     cloud.scale = 2;
